@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d3c8d4e65174c7ca961e024eaa68ba, type: 3}
+  m_Name: ParticleParameters
+  m_EditorClassIdentifier: 
+  mass: 1
+  drag: 0.1
+  angularDrag: 0.1
+  forceMagnitude: 1
+  centralForceFraction: 0.1
+  worldLimitBounceForceMagnitude: 5
+  meanUpdateRate: 3
+  bondLength: 1.5
+  meanBondDecayRate: 5
