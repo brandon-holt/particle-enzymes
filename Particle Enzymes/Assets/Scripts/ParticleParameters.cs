@@ -8,7 +8,6 @@ public class ParticleParameters : ScriptableObject
 {
     public float mass, drag, angularDrag; // rigidbody properties
     public float forceMagnitude; // force applied to particles
-    public float centralForceFraction; // fraction of forceMagnitude pulling particles toward center
     public float worldLimitBounceForceMagnitude; // force applied to particles when they hit the world limit
     public float meanUpdateRate; // mean rate of particle update
     public float bondLength; // distance between particles
@@ -20,7 +19,7 @@ public class ParticleParameters : ScriptableObject
 
         p.rb.position = new Vector3(0, 0, 0);
 
-        p.rb.velocity = 10f * new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        p.rb.velocity = .1f * new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
     }
 
     public void AddRigidbody(Particle p)
@@ -51,11 +50,7 @@ public class ParticleParameters : ScriptableObject
 
         force.z = Random.Range(-1f, 1f);
 
-        force += centralForceFraction * -p.transform.position.normalized;
-
         p.rb.AddForce(forceMagnitude * force, ForceMode.Impulse);
-
-        // add torque
     }
 
     public void BounceBack(Particle p)

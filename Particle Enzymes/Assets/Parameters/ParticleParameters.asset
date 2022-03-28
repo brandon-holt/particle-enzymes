@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: ParticleParameters
   m_EditorClassIdentifier: 
   mass: 1
-  drag: 0.1
-  angularDrag: 0.1
-  forceMagnitude: 1
-  centralForceFraction: 0.1
+  drag: 0.05
+  angularDrag: 0.05
+  forceMagnitude: 5
   worldLimitBounceForceMagnitude: 5
-  meanUpdateRate: 3
+  meanUpdateRate: 10
   bondLength: 1.5
-  meanBondDecayRate: 5
+  meanBondDecayRate: 60
